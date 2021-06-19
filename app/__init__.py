@@ -18,5 +18,9 @@ def meetVi():
 def meetAshley():
     return render_template('meetAshley.html', title="Ashley Ye", url=os.getenv("URL"))
 
+@app.route('/health')
+def health():
+    return render_template('meetAshley.html', title="Ashley Ye", url=os.getenv("URL"))
+
 if __name__ ==  "__main__":
     app.run(debug=True)
