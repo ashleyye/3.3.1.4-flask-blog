@@ -6,4 +6,4 @@ jobs:
     name: Build docker container
     steps:
       - name: Launch Flask app
-        uses: ashleyye/3.3.1.4-flask-blog@v3
+        uses: ashleyye/3.3.1.4-flask-blog@v4
