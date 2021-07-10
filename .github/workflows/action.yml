@@ -1,0 +1,7 @@
+# github action
+name: 'Build Docker container'
+description: 'Builds a Docker container and deploys website'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  
