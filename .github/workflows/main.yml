@@ -1,9 +1,0 @@
-on: [push]
-
-jobs:
-  mlh_flask_app:
-    runs-on: ubuntu-latest
-    name: Build docker container
-    steps:
-      - name: Launch Flask app
-        uses: ashleyye/3.3.1.4-flask-blog@v6
