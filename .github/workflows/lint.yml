@@ -1,8 +1,6 @@
 name: Lint
 
 on:
-  # Trigger the workflow on push or pull request
-  # but only for the main branch
   push:
     branches:
       - master
@@ -32,4 +30,17 @@ jobs:
         with:
           black: true
           flake8: true
-      
+          autofix: true
+docker:
+  runs-on: ubuntu-latest
+  steps:
+    -
+      name: Build and push
+      id: docker_build
+      uses: docker/build-push-action@v7
+      with:
+        push: false
+        tags: user/app:latest
+    -
+      name: Image digest
+      run: echo ${{ steps.docker_build.outputs.digest }}
