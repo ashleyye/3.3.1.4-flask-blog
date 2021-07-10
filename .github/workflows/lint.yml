@@ -37,7 +37,7 @@ docker:
     -
       name: Build and push
       id: docker_build
-      uses: docker/build-push-action@v7
+      uses: docker/build-push-action@v8
       with:
         push: false
         tags: user/app:latest
